@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-protocol Navigator {
-
-}
+protocol Navigator {}
 
 protocol GymNavigator: Navigator {
 	func viewController(_ viewController: UIViewController, didShowInfo gym: String)
@@ -26,12 +24,6 @@ final class AppNavigator: Navigator {
 
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
-		self.navigationController.navigationBar.barTintColor = UIColor.red
-	}
-
-	func run() {
-		let rootVC = WURootViewController.init(navigator: self)
-		navigationController.setViewControllers([rootVC], animated: true)
 	}
 
 	func pushToViewController(viewController: UIViewController) {

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA06C65C1F98376700B31E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C65B1F98376700B31E84 /* AppDelegate.swift */; };
-		EA06C65E1F98376700B31E84 /* WURootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C65D1F98376700B31E84 /* WURootViewController.swift */; };
 		EA06C6611F98376700B31E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA06C65F1F98376700B31E84 /* Main.storyboard */; };
 		EA06C6631F98376700B31E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA06C6621F98376700B31E84 /* Assets.xcassets */; };
 		EA06C6661F98376700B31E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA06C6641F98376700B31E84 /* LaunchScreen.storyboard */; };
@@ -20,9 +19,10 @@
 		EA542C381F9B15A00016B824 /* WUGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C371F9B15A00016B824 /* WUGymViewController.swift */; };
 		EA542C3A1F9B1ECF0016B824 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C391F9B1ECF0016B824 /* Navigator.swift */; };
 		EA542C3D1F9B217F0016B824 /* WUGymInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C3C1F9B217F0016B824 /* WUGymInfoViewController.swift */; };
-		EA542C3F1F9B39540016B824 /* WUHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C3E1F9B39540016B824 /* WUHomeViewController.swift */; };
+		EA542C3F1F9B39540016B824 /* WUBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C3E1F9B39540016B824 /* WUBrowseViewController.swift */; };
 		EA542C411F9B395D0016B824 /* WUSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C401F9B395D0016B824 /* WUSettingViewController.swift */; };
 		EA542C431F9B39660016B824 /* WUMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C421F9B39660016B824 /* WUMapViewController.swift */; };
+		EA542C491F9B9B4A0016B824 /* WUBrowseGymCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C481F9B9B4A0016B824 /* WUBrowseGymCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		EA06C6581F98376700B31E84 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA06C65B1F98376700B31E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA06C65D1F98376700B31E84 /* WURootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WURootViewController.swift; sourceTree = "<group>"; };
 		EA06C6601F98376700B31E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA06C6621F98376700B31E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA06C6651F98376700B31E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,9 +52,10 @@
 		EA542C371F9B15A00016B824 /* WUGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUGymViewController.swift; sourceTree = "<group>"; };
 		EA542C391F9B1ECF0016B824 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		EA542C3C1F9B217F0016B824 /* WUGymInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUGymInfoViewController.swift; sourceTree = "<group>"; };
-		EA542C3E1F9B39540016B824 /* WUHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUHomeViewController.swift; sourceTree = "<group>"; };
+		EA542C3E1F9B39540016B824 /* WUBrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUBrowseViewController.swift; sourceTree = "<group>"; };
 		EA542C401F9B395D0016B824 /* WUSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUSettingViewController.swift; sourceTree = "<group>"; };
 		EA542C421F9B39660016B824 /* WUMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUMapViewController.swift; sourceTree = "<group>"; };
+		EA542C481F9B9B4A0016B824 /* WUBrowseGymCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUBrowseGymCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,10 +131,9 @@
 		EA06C68A1F999F1900B31E84 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA06C65D1F98376700B31E84 /* WURootViewController.swift */,
 				EA542C461F9B39850016B824 /* Browse */,
-				EA542C451F9B39730016B824 /* Settings */,
 				EA542C441F9B396E0016B824 /* Map */,
+				EA542C451F9B39730016B824 /* Settings */,
 				EA542C471F9B39A40016B824 /* Info */,
 			);
 			path = View;
@@ -167,8 +166,9 @@
 		EA542C461F9B39850016B824 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
-				EA542C3E1F9B39540016B824 /* WUHomeViewController.swift */,
+				EA542C3E1F9B39540016B824 /* WUBrowseViewController.swift */,
 				EA06C68B1F999F5600B31E84 /* WUGymListViewController.swift */,
+				EA542C481F9B9B4A0016B824 /* WUBrowseGymCollectionViewCell.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -286,17 +286,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA06C6861F999C4400B31E84 /* NetworkManager.swift in Sources */,
-				EA06C65E1F98376700B31E84 /* WURootViewController.swift in Sources */,
 				EA06C6881F999E5600B31E84 /* NetworkEnum.swift in Sources */,
 				EA542C3D1F9B217F0016B824 /* WUGymInfoViewController.swift in Sources */,
 				EA542C381F9B15A00016B824 /* WUGymViewController.swift in Sources */,
+				EA542C491F9B9B4A0016B824 /* WUBrowseGymCollectionViewCell.swift in Sources */,
 				EA542C431F9B39660016B824 /* WUMapViewController.swift in Sources */,
 				EA542C411F9B395D0016B824 /* WUSettingViewController.swift in Sources */,
 				EA06C67C1F983D6B00B31E84 /* XMLTransformer.swift in Sources */,
 				EA542C3A1F9B1ECF0016B824 /* Navigator.swift in Sources */,
 				EA06C68C1F999F5600B31E84 /* WUGymListViewController.swift in Sources */,
 				EA06C65C1F98376700B31E84 /* AppDelegate.swift in Sources */,
-				EA542C3F1F9B39540016B824 /* WUHomeViewController.swift in Sources */,
+				EA542C3F1F9B39540016B824 /* WUBrowseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
