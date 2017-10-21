@@ -9,17 +9,21 @@
 import Foundation
 import UIKit
 
-class WUGymListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+final class WUGymListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
+	typealias SubNavigator = GymListNavigator
 	let kWUGymCell = "WUGymTableViewCell"
+	let navigator: SubNavigator
 	var didSelect: (String) -> () = { _ in }
+	var sortByPersonAmount: (String) -> () = { _ in }
 	var tableView: UITableView!
 	var gyms: Array<String>!
 
-	init() {
-		super.init(nibName: nil, bundle: nil)
+	init(navigator: SubNavigator) {
+		self.navigator = navigator
 		self.tableView = UITableView.init()
 		self.gyms = ["Daan", "XinYi", "RenAi"]
+		super.init(nibName: nil, bundle: nil)
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -30,6 +34,7 @@ class WUGymListViewController: UIViewController, UITableViewDelegate, UITableVie
 	{
 		super.viewDidLoad()
 		self.view.backgroundColor = UIColor.red
+		self.edgesForExtendedLayout = []
 
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
@@ -42,9 +47,13 @@ class WUGymListViewController: UIViewController, UITableViewDelegate, UITableVie
 		tableViewConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|[tableView]|", options: [], metrics: nil, views: ["tableView": tableView]))
 		NSLayoutConstraint.activate(tableViewConstraints)
 
-		// select action
 		self.didSelect = { gym in
-			self.navigationController?.pushViewController(WUGymViewController.init(), animated: true)
+			self.navigator.viewController(WUGymViewController.init(navigator: self.navigator as! WUGymViewController.SubNavigator), didSelectGym: gym)
+//			self.navigator.viewController(WUGymViewController.init(navigator: self.navigator as! WUGymViewController.SubNavigator), didPushedToList: gym)
+		}
+
+		self.sortByPersonAmount = { gym in
+
 		}
 	}
 

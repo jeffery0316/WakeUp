@@ -18,6 +18,11 @@
 		EA06C6881F999E5600B31E84 /* NetworkEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C6871F999E5600B31E84 /* NetworkEnum.swift */; };
 		EA06C68C1F999F5600B31E84 /* WUGymListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA06C68B1F999F5600B31E84 /* WUGymListViewController.swift */; };
 		EA542C381F9B15A00016B824 /* WUGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C371F9B15A00016B824 /* WUGymViewController.swift */; };
+		EA542C3A1F9B1ECF0016B824 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C391F9B1ECF0016B824 /* Navigator.swift */; };
+		EA542C3D1F9B217F0016B824 /* WUGymInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C3C1F9B217F0016B824 /* WUGymInfoViewController.swift */; };
+		EA542C3F1F9B39540016B824 /* WUHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C3E1F9B39540016B824 /* WUHomeViewController.swift */; };
+		EA542C411F9B395D0016B824 /* WUSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C401F9B395D0016B824 /* WUSettingViewController.swift */; };
+		EA542C431F9B39660016B824 /* WUMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA542C421F9B39660016B824 /* WUMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		EA06C6871F999E5600B31E84 /* NetworkEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnum.swift; sourceTree = "<group>"; };
 		EA06C68B1F999F5600B31E84 /* WUGymListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUGymListViewController.swift; sourceTree = "<group>"; };
 		EA542C371F9B15A00016B824 /* WUGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUGymViewController.swift; sourceTree = "<group>"; };
+		EA542C391F9B1ECF0016B824 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		EA542C3C1F9B217F0016B824 /* WUGymInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUGymInfoViewController.swift; sourceTree = "<group>"; };
+		EA542C3E1F9B39540016B824 /* WUHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUHomeViewController.swift; sourceTree = "<group>"; };
+		EA542C401F9B395D0016B824 /* WUSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUSettingViewController.swift; sourceTree = "<group>"; };
+		EA542C421F9B39660016B824 /* WUMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		EA06C65A1F98376700B31E84 /* WakeUp */ = {
 			isa = PBXGroup;
 			children = (
+				EA542C3B1F9B207D0016B824 /* Utility */,
 				EA06C68A1F999F1900B31E84 /* View */,
 				EA06C6891F999F0900B31E84 /* API */,
 				EA06C65B1F98376700B31E84 /* AppDelegate.swift */,
@@ -121,10 +132,54 @@
 			isa = PBXGroup;
 			children = (
 				EA06C65D1F98376700B31E84 /* WURootViewController.swift */,
-				EA06C68B1F999F5600B31E84 /* WUGymListViewController.swift */,
-				EA542C371F9B15A00016B824 /* WUGymViewController.swift */,
+				EA542C461F9B39850016B824 /* Browse */,
+				EA542C451F9B39730016B824 /* Settings */,
+				EA542C441F9B396E0016B824 /* Map */,
+				EA542C471F9B39A40016B824 /* Info */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EA542C3B1F9B207D0016B824 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EA542C391F9B1ECF0016B824 /* Navigator.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		EA542C441F9B396E0016B824 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				EA542C421F9B39660016B824 /* WUMapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		EA542C451F9B39730016B824 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EA542C401F9B395D0016B824 /* WUSettingViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EA542C461F9B39850016B824 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				EA542C3E1F9B39540016B824 /* WUHomeViewController.swift */,
+				EA06C68B1F999F5600B31E84 /* WUGymListViewController.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		EA542C471F9B39A40016B824 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				EA542C371F9B15A00016B824 /* WUGymViewController.swift */,
+				EA542C3C1F9B217F0016B824 /* WUGymInfoViewController.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,10 +288,15 @@
 				EA06C6861F999C4400B31E84 /* NetworkManager.swift in Sources */,
 				EA06C65E1F98376700B31E84 /* WURootViewController.swift in Sources */,
 				EA06C6881F999E5600B31E84 /* NetworkEnum.swift in Sources */,
+				EA542C3D1F9B217F0016B824 /* WUGymInfoViewController.swift in Sources */,
 				EA542C381F9B15A00016B824 /* WUGymViewController.swift in Sources */,
+				EA542C431F9B39660016B824 /* WUMapViewController.swift in Sources */,
+				EA542C411F9B395D0016B824 /* WUSettingViewController.swift in Sources */,
 				EA06C67C1F983D6B00B31E84 /* XMLTransformer.swift in Sources */,
+				EA542C3A1F9B1ECF0016B824 /* Navigator.swift in Sources */,
 				EA06C68C1F999F5600B31E84 /* WUGymListViewController.swift in Sources */,
 				EA06C65C1F98376700B31E84 /* AppDelegate.swift in Sources */,
+				EA542C3F1F9B39540016B824 /* WUHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
