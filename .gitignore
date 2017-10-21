@@ -5,6 +5,8 @@
 ## Build generated
 build/
 DerivedData/
+xcuserdata
+*.xcworkspacedata
 
 ## Various settings
 *.pbxuser
